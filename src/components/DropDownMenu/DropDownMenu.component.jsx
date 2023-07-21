@@ -6,24 +6,21 @@ export default function DropDownMenu({ dropDownTitle, dropDownItems }) {
     const categoryRef = useRef()
     const menuRef = useRef()
 
-    const manageOutsideClick = (event) => {
-        if (categoryRef.current?.contains(event.target)) {
-            // console.log('clicked inside')
-            setIsCategoryDropOpen(isOpen => !isOpen)
-        } else if (menuRef.current?.contains(event.target)) {
-            setIsCategoryDropOpen(!isCategoryDropOpen)
-        } else {
-            // console.log('clicked outside')
-            setIsCategoryDropOpen(false)
-        }
-
-    }
 
     useEffect(function () {
-        document.addEventListener('click', manageOutsideClick)
 
+        const manageOutsideClick = (event) => {
+            if (categoryRef.current?.contains(event.target)) {
+                setIsCategoryDropOpen(isOpen => !isOpen)
+            } else {
+                setIsCategoryDropOpen(false)
+            }
+
+        }
+
+        document.addEventListener('click', manageOutsideClick)
         return () => document.removeEventListener('click', manageOutsideClick)
-    }, [])
+    })
 
     return (
         <div className={styles.drop_down_wrapper}>
@@ -32,7 +29,7 @@ export default function DropDownMenu({ dropDownTitle, dropDownItems }) {
                 isCategoryDropOpen &&
                 <div ref={menuRef} className={styles.drop_down_list}>
                     {
-                        dropDownItems.map(link => <li key={link}><a href="#">{link} <FaAngleRight /></a></li>)
+                        dropDownItems.map(link => <li key={link}><a href="link">{link} <FaAngleRight /></a></li>)
                     }
                 </div>
             }

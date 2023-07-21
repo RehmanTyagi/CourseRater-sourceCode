@@ -18,12 +18,11 @@ export default function UserAuthForm() {
             setIsFormOpen(true)
         }
     }
-
     useEffect(function () {
         document.addEventListener('click', manageOutsideClick)
-
+        console.log(`render from auth`)
         return () => document.removeEventListener('click', manageOutsideClick)
-    }, [])
+    })
 
     return (
         <div className="user-auth-form">
