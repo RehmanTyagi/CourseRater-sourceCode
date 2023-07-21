@@ -1,0 +1,14 @@
+.query-search-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 2rem;
+  font-size: var(--initialFont);
+  color: white;
+  background-color: var(--primaryColor);
+  border: none;
+}
+
+.query-search-btn:hover {
+  background-color: var(--secondaryColor);
+}

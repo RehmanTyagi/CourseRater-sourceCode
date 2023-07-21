@@ -1,0 +1,43 @@
+.user-auth-form {
+  position: relative;
+  .user-panel-icon {
+    display: flex;
+    color: white;
+    cursor: pointer;
+    background-color: var(--primaryColor);
+    padding: 1rem;
+    border-radius: 100%;
+  }
+  .user-panel-icon:hover {
+    background-color: var(--secondaryColor);
+  }
+  .auth-form {
+    font-size: 1em;
+    display: grid;
+    grid-gap: 1rem;
+    position: absolute;
+    left: 100%;
+    top: 150%;
+    width: 250px;
+    padding: 1rem;
+    background-color: white;
+    transform: translateX(-100%);
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    box-shadow: 0 0 20px lightgray;
+    color: var(--textColor);
+    input {
+      padding: 0.5rem;
+    }
+    .forgot-link {
+      text-align: right;
+    }
+    .create-account-link {
+      text-align: center;
+      text-decoration: none;
+    }
+    .form-title {
+      text-transform: capitalize;
+    }
+  }
+}
