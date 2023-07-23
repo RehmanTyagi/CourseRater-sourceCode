@@ -41,3 +41,13 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .user-auth-form .auth-form {
+    left: 0;
+    top: 0;
+    position: fixed;
+    transform: unset;
+    width: 100%;
+  }
+}

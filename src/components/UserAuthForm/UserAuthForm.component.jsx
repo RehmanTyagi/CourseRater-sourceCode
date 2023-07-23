@@ -20,7 +20,6 @@ export default function UserAuthForm() {
     }
     useEffect(function () {
         document.addEventListener('click', manageOutsideClick)
-        console.log(`render from auth`)
         return () => document.removeEventListener('click', manageOutsideClick)
     })
 
